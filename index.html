@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+<!--
+    <script src="https://unpkg.com/react@latest/umd/react.development.js" crossorigin></script> 
+    <script src="https://unpkg.com/react-dom@latest/umd/react-dom.development.js" crossorigin></script> 
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+-->
+    <script src='https://unpkg.com/@remix-run/router@1.11.0/dist/router.umd.min.js'></script>
+    <script src='https://unpkg.com/react-router@6.18.0/dist/umd/react-router.development.js'></script>
+    <script src='https://unpkg.com/react-router-dom@6.18.0/dist/umd/react-router-dom.development.js'></script>
+
+  </head>
+  <body>
+    <div id='root'></div>
+ <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+    <script type='text/babel'>
+      const Link = ReactRouterDOM.Link;
+      const Route = ReactRouterDOM.Route;
+      const Routes = ReactRouterDOM.Routes;
+      const Router = ReactRouterDOM.BrowserRouter;
+
+      function App() {
+        return (
+          <Router>
+            <nav>
+              <br/><Link to="/">TO HOME</Link>
+              <br/><Link to="/a">TO A</Link>
+              <br/><Link to="/b">TO B</Link>
+            </nav>
+
+            <Routes>
+              <Route path="/" element={<h1>Home</h1>} />
+              <Route path="/a" element={<h1>A</h1>} />
+              <Route path="/b" element={<h1>B</h1>} />
+            </Routes>
+          </Router>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
