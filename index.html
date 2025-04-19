@@ -8,8 +8,8 @@
 <body> 
   <div id="root"></div> 
   <script type="text/babel"> 
-/*const {useState,useEffect} from React;
-
+const {useState,useEffect} = React;
+/*
 // managing the loading state
 const PostList = ({ posts }) => {
   return (
@@ -106,7 +106,10 @@ const App = () => ( <ReactRouterDOM.HashRouter> <ul>
 <Route path="/login" component={Login} /> 
 <Route path="/register" component={Register} /> </ReactRouterDOM.HashRouter> )
 const Home = () => <h1>Home</h1> 
-const Happy = () => <h1>Happy</h1>
+const Happy = () => {
+  const [bez,setBez] = useState("animals"),
+ return ( <h1>Happy {bez}</h1>
+                     );}
 const Login = () => <h1>Login</h1> 
 const Register = () => <h1>Register</h1> 
 ReactDOM.render(<App />, document.querySelector('#root')); </script> 
