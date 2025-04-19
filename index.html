@@ -95,10 +95,8 @@ const Pagination = ({
 };*/
 const Link = ReactRouterDOM.Link; 
 const Route = ReactRouterDOM.Route; 
-const App = () => {
-  const [bez,setBez]=useState("animals");
-  return
-  ( <div><h2>Happy {bez}</h2><ReactRouterDOM.HashRouter> <ul> 
+const App = () => 
+  ( <ReactRouterDOM.HashRouter> <ul> 
   <li><Link to="/">Home</Link></li> 
   <li><Link to="/client-side">Happy Client</Link></li>
   <li><Link to="/login">Login</Link></li> 
@@ -107,11 +105,10 @@ const App = () => {
 <Route path="/client-side" component={Happy} />
           
 <Route path="/login" component={Login} /> 
-<Route path="/register" component={Register} /> </ReactRouterDOM.HashRouter></div> )}
+<Route path="/register" component={Register} /> </ReactRouterDOM.HashRouter>)
 const Home = () => <h1>Home</h1> 
-const Happy = () => {
- return ( <h1>Happy</h1>
-                     );}
+const Happy = () => <h1>Am I the walrus?</h1>
+                     
 const Login = () => <h1>Login</h1> 
 const Register = () => <h1>Register</h1> 
 ReactDOM.render(<App />, document.querySelector('#root')); </script> 
