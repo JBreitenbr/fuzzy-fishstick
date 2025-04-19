@@ -8,7 +8,8 @@
 <body> 
   <div id="root"></div> 
   <script type="text/babel"> 
-const {useState,useEffect} from React;const ClientSide = () => {
+const {useState,useEffect} from React;
+    const ClientSide = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
@@ -96,11 +97,11 @@ const Link = ReactRouterDOM.Link;
 const Route = ReactRouterDOM.Route; 
 const App = () => ( <ReactRouterDOM.HashRouter> <ul> 
   <li><Link to="/">Home</Link></li> 
-  <li><Link to="/client-side">Client</Link></li>
+  <li><Link to="/client-side">Happy Client</Link></li>
   <li><Link to="/login">Login</Link></li> 
   <li><Link to="/register">Register</Link></li> </ul> 
 <Route path="/" exact component={Home} /> 
-<Route path="/client-side" element={<ClientSide />} />
+<Route path="/client-side" component={ClientSide} />
           
 <Route path="/login" component={Login} /> 
 <Route path="/register" component={Register} /> </ReactRouterDOM.HashRouter> )
